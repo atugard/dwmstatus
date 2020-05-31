@@ -193,8 +193,8 @@ main(void)
 		t0 = gettemperature("/sys/class/hwmon/hwmon0", "temp1_input");
 		t1 = gettemperature("/sys/class/hwmon/hwmon1", "temp1_input");
 
-		status = smprintf(" :%s, %s   av : %s   %s",
-				t0, t1, avgs, tmmtl);
+		status = smprintf(" :%s, %s   %s",
+				t0, t1, tmmtl);
 		setstatus(status);
 
 		free(t0);
